@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading;
@@ -47,6 +48,14 @@ namespace TaskAwait.Library
             return new List<int>();
         }
 
+        public Person GetPerson(int id)
+        {
+            var client = new WebClient();
+            string address = $"http://localhost:9874/people/{id}";
+            string reply = client.DownloadString(address);
+            return JsonSerializer.Deserialize<Person>(reply, options);
+        }
+
         public async Task<Person> GetPersonAsync(int id,
             CancellationToken cancelToken = new CancellationToken())
         {
@@ -74,7 +83,7 @@ namespace TaskAwait.Library
                 cancelToken.ThrowIfCancellationRequested();
 
                 int id = ids[i];
-                var person = await GetPersonAsync(id, cancelToken).ConfigureAwait(false);
+                var person = await Task.Run(() => GetPerson(id)).ConfigureAwait(false);
 
                 int percentComplete = (int)((i + 1) / (float)ids.Count * 100);
                 progress.Report(percentComplete);
