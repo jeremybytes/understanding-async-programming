@@ -45,6 +45,7 @@ namespace Concurrent.UI
                         PersonListBox.Items.Add(person);
                 }
 
+                tokenSource.Dispose();
                 FetchWithTaskButton.IsEnabled = true;
             },
             TaskScheduler.FromCurrentSynchronizationContext());
@@ -88,6 +89,7 @@ namespace Concurrent.UI
 
         //    peopleTask.ContinueWith(task =>
         //    {
+        //        tokenSource.Dispose();
         //        FetchWithTaskButton.IsEnabled = true;
         //    },
         //    TaskScheduler.FromCurrentSynchronizationContext());

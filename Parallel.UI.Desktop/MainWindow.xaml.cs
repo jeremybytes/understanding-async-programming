@@ -56,6 +56,7 @@ namespace Parallel.UI
             }
             finally
             {
+                tokenSource.Dispose();
                 FetchWithTaskButton.IsEnabled = true;
             }
         }

@@ -102,6 +102,7 @@ namespace ProgressReport.UI
                     People = task.Result;
                 }
 
+                tokenSource.Dispose();
                 FetchWithTaskEnabled = true;
             },
             TaskScheduler.FromCurrentSynchronizationContext());
