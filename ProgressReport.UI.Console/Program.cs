@@ -104,8 +104,10 @@ namespace ProgressReport.UI
                 Console.WriteLine($"\nERROR\n{ex.GetType()}\n{ex.Message}");
                 Environment.Exit(1);
             }
-
-            Environment.Exit(0);
+            finally
+            {
+                Environment.Exit(0);
+            }
         }
 
         private static void HandleExit()
