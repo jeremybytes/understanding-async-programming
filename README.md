@@ -43,37 +43,42 @@ A web service that supplies data for the sample projects.
 * *TaskAwait.Shared*  
 A library with data types that are shared across projects (primarily the "Person" type).  
 * *TaskAwait.Library*  
-A library with asynchronous methods that access the web service.  
+A library with asynchronous methods that access the web service. These methods are called in the various applications detailed below.  
 Relevant file: **PersonReader.cs**
 
-**Concurrent Samples**
+**Concurrent Samples**  
+The Concurrent samples run asynchronous methods, get results, handle exceptions, and support cancellation (unless otherwise noted).
 * *Concurrent.UI.Console*  
-A console application that calls asynchronous methods, gets results, handles exceptions, and supports cancellation. (Windows, macOS, Linux)  
+A console application  (Windows, macOS, Linux)  
 Relevant file: **Program.cs**
 * *Concurrent.UI.Desktop*  
-A WPF desktop application that calls asynchronous methods, gets results, handles exceptions, and supports cancellation. (Windows only)  
+A WPF desktop application (Windows only).  
 Relevant file: **MainWindow.xaml.cs**  
 * *Concurrent.UI. Web*  
-A web application that calls asynchronous methods, gets results, and handles exceptions. (Windows, macOS, Linux)  
+A web application (Windows, macOS, Linux).  
+Note: this application does not support cancellation.  
 Relevant file: **Controllers/PeopleController.cs**  
 
-**Parallel Samples**
+**Parallel Samples**  
+The Parallel samples use Task to run asynchronous methods in parallel - also get results, handle exceptions, and support cancellation (unless otherwise noted).
 * *Parallel.UI.Console*  
-A console application that uses Task to call asynchronous methods in parallel. Also gets results, handles exceptions, and supports cancellation. (Windows, macOS, Linux)  
+A console application (Windows, macOS, Linux).  
 Relevant file: **Program.cs**
 * *Parallel.UI.Desktop*  
-A WPF desktop application that that uses Task to call asynchronous methods in parallel. Also gets results, handles exceptions, and supports cancellation. (Windows only)  
+A WPF desktop application (Windows only).  
 Relevant file: **MainWindow.xaml.cs**  
 * *Parallel.UI. Web*  
-A web application that that uses Task to call asynchronous methods in parallel. Also gets results, and handles exceptions. (Windows, macOS, Linux)  
+A web application (Windows, macOS, Linux).  
+Note: this application does not support cancellation.  
 Relevant file: **Controllers/PeopleController.cs**  
 
-**Progress Reporting**  
+**Progress Reporting (Bonus Materials)**  
+The Progress Reporting samples show how to report progress from an asynchronous method - in this case, as a percentage complete. These also get results, handle exceptions, and support cancellation.
 * *ProgressReport.UI.Console*  
-A console application that reports percentage complete progress from an asynchronous method call. Also gets results, handles exceptions, and supports cancellation. (Windows, macOS, Linux)  
+A console application that reports percentage complete progress through text. Ex: "21% Complete". (Windows, macOS, Linux)  
 Relevant file: **Program.cs**
 * *Parallel.UI.Desktop*  
-A WPF desktop application that  reports percentage complete progress from an asynchronous method call. Also gets results, handles exceptions, and supports cancellation. (Windows only)  
+A WPF desktop application that  reports percentage complete progress through a graphical progress bar. (Windows only)  
 Relevant file: **MainWindow.xaml.cs**  
 * *TaskAwait.Library*  
 This shared library contains a method that supports progress reporting.  
