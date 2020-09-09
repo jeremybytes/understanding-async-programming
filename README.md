@@ -102,9 +102,10 @@ Stephen Cleary has lots of great articles, books, and practical advice.
 * [Don't Block on Async Code](https://blog.stephencleary.com/2012/07/dont-block-on-async-code.html) - Stephen Cleary
 * [Async/Await - Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming) - Stephen Cleary
 
-**Articles Suggested by Attendees**  
+**Articles / Videos Suggested by Attendees**  
 * [ASP.NET Core SynchronizationContext](https://blog.stephencleary.com/2017/03/aspnetcore-synchronization-context.html) by Stephen Cleary  
 * [ConfigureAwait FAQ](https://devblogs.microsoft.com/dotnet/configureawait-faq/) by Stephen Toub  
-* [There Is No Thread](https://blog.stephencleary.com/2013/11/there-is-no-thread.html) by Stephen Cleary
+* [There Is No Thread](https://blog.stephencleary.com/2013/11/there-is-no-thread.html) by Stephen Cleary  
+* [C# Async/Await/Task Explained (Deep Dive)](https://www.youtube.com/watch?v=il9gl8MH17s) Video by Raw Coding
 
 For more information, visit [jeremybytes.com](http://www.jeremybytes.com).
