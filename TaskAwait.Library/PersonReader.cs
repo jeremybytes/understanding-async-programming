@@ -72,6 +72,32 @@ namespace TaskAwait.Library
             return new Person();
         }
 
+        public async Task<Person> GetPersonAsyncWithFailures(int id,
+            CancellationToken cancelToken = new CancellationToken())
+        {
+            HttpResponseMessage response =
+                await client.GetAsync($"people/{id}", cancelToken).ConfigureAwait(false);
+
+            if (id == 2)
+            {
+                throw new InvalidOperationException("Using id=2 is not supported by this method");
+            }
+
+            if (id == 5)
+            {
+                throw new NotImplementedException("Using id=5 has not been implemented");
+            }
+
+            if (response.IsSuccessStatusCode)
+            {
+                cancelToken.ThrowIfCancellationRequested();
+                string stringResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                Person result = JsonSerializer.Deserialize<Person>(stringResult, options);
+                return result;
+            }
+            return new Person();
+        }
+
         public async Task<List<Person>> GetPeopleAsync(IProgress<int> progress,
             CancellationToken cancelToken = new CancellationToken())
         {

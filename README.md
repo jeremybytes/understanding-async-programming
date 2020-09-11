@@ -72,7 +72,7 @@ A web application (Windows, macOS, Linux).
 Note: this application does not support cancellation.  
 Relevant file: **Controllers/PeopleController.cs**  
 
-**Progress Reporting (Bonus Materials)**  
+**Progress Reporting (Bonus Material)**  
 The Progress Reporting samples show how to report progress from an asynchronous method - in this case, as a percentage complete. These also get results, handle exceptions, and support cancellation.
 * *ProgressReport.UI.Console*  
 A console application that reports percentage complete progress through text. Ex: "21% Complete". (Windows, macOS, Linux)  
@@ -86,6 +86,18 @@ Relevant method:
 ```c#
 public async Task<List<Person>> GetPeopleAsync(IProgress<int> progress,
     CancellationToken cancelToken = new CancellationToken()) {...}
+```
+
+**Exploring Exceptions (Bonus Material)**  
+This sample uses the parallel console code (noted above) to show how an AggregateException with multiple inner exceptions is unwrapped with "await". It also shows manual inspection of the AggregateException.
+* *TaskException.UI.Console*  
+(Windows, macOS, Linux)  
+* *TaskAwait.Library*  
+This shared library contains a method that supports throws exceptions for select calls (id = 2 or id = 5).  
+Relevant method:
+```c#
+public async Task<Person> GetPersonAsyncWithFailures(int id,
+    CancellationToken cancelToken = new CancellationToken())
 ```
 
 Additional Resources
