@@ -102,17 +102,23 @@ public async Task<Person> GetPersonAsyncWithFailures(int id,
 
 Additional Resources
 --------------------
+**Related Articles (by Jeremy)**
+* ["await.WhenAll" Shows 1 Exception - Here's How to See Them All](https://jeremybytes.blogspot.com/2020/09/await-taskwhenall-shows-one-exception.html)
+
 **Video Series & Articles (by Jeremy)**  
 Each of these has a lot of supporting links:  
 * [I'll Get Back to You: Task, Await, and Asynchronous Programming in C#](http://www.jeremybytes.com/Demos.aspx#TaskAndAwait)  
 * [Run Faster: Parallel Programming in C#](http://www.jeremybytes.com/Demos.aspx#ParallelProgramming)  
 * [Learn to Love Lambdas in C# (and LINQ, ToO!)](http://www.jeremybytes.com/Demos.aspx#LLL)  
-* [Get Func-y: Delegates in .NET](http://www.jeremybytes.com/Demos.aspx#GF)
+* [Get Func-y: Delegates in .NET](http://www.jeremybytes.com/Demos.aspx#GF)  
 
 **Other Resources**  
 Stephen Cleary has lots of great articles, books, and practical advice.
 * [Don't Block on Async Code](https://blog.stephencleary.com/2012/07/dont-block-on-async-code.html) - Stephen Cleary
 * [Async/Await - Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming) - Stephen Cleary
+
+Stephen Toub has great articles, too (generally with advanced insights).
+* [Do I Need to Dispose of Tasks?](https://devblogs.microsoft.com/pfxteam/do-i-need-to-dispose-of-tasks/) - Stephen Toub
 
 **Articles / Videos Suggested by Attendees**  
 * [ASP.NET Core SynchronizationContext](https://blog.stephencleary.com/2017/03/aspnetcore-synchronization-context.html) by Stephen Cleary  
